@@ -633,7 +633,7 @@ footer {
 
 .marco-foto {
   
-    display: inline-block; /* Esto hace que el borde azul 'abrace' a la foto */
+    display: inline-block; 
     border: 8px solid #00468b;
     border-radius: 5px;
     overflow: hidden;
@@ -647,8 +647,7 @@ footer {
     
     display: block;
     height: auto;
-    width: 100%; /* Ahora el 100% significa el total de los 400px del HTML */
-
+    width: 100%; 
 }
 
 .nombres-autores {
@@ -695,21 +694,21 @@ footer {
 }
 
 .boton-regresar-fijo {
-    position: fixed !important; /* El !important obliga al navegador a aplicarlo */
+    position: fixed !important; 
     bottom: 40px !important;
     right: 40px !important;
-    display: block !important; /* Asegura que no esté oculto */
+    display: block !important; 
     
     width: auto;
     height: auto;
-    background-color: #1c3b9a; /* Color rojo temporal para que lo encuentres rápido */
+    background-color: #1c3b9a; 
     color: white !important;
     padding: 15px 25px;
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    z-index: 999999; /* Lo pone por encima de ABSOLUTAMENTE todo */
+    z-index: 999999; 
     box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
 }
 .grid-bazar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
