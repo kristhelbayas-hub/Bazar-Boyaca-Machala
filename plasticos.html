@@ -25,29 +25,74 @@
 
   <h2>Plásticos y desechables</h2>
 
-  <div class="grid-productos">
-    <div class="producto">
-      <img src="imagenes/plasticos/platos descartables.png" alt="Platos desechables">
-      <h4>Platos desechables</h4>
-      <p>Paquete de platos plásticos ideales para eventos y reuniones.</p>
-      <p>Paquete — $1,25</p>
-    </div>
+<h3 class="subtitulo">Plásticos y desechables</h3>
 
-    <div class="producto">
-      <img src="imagenes/plasticos/vasos plasticos.png" alt="Vasos plásticos">
-      <h4>Vasos plásticos</h4>
-      <p>Paquete de vasos plásticos para bebidas frías.</p>
-      <p>Paquete — $1,00</p>
-    </div>
+<div class="grid-productos">
 
-    <div class="producto">
-      <img src="imagenes/plasticos/cucharas.png" alt="Cucharas desechables">
-      <h4>Cucharas desechables</h4>
-      <p>Paquete de cucharas plásticas desechables.</p>
-      <p>Paquete — $1,00</p>
-    </div>
+<div class="producto" onclick="abrirModal(
+  'Platos desechables',
+  'imagenes/plasticos/platos descartables.png',
+  'Paquete de platos plásticos ideales para eventos y reuniones.'
+)">
+  <div class="img-producto">
+    <img src="imagenes/plasticos/platos descartables.png" alt="Platos desechables">
   </div>
-  <a href="plasticos.html" class="boton-regresar-fijo">
+  <h4>Platos desechables</h4>
+  <p>Plásticos para eventos.</p>
+  <span class="precio">Paquete $1.25</span>
+</div>
+
+<div class="producto" onclick="abrirModal(
+  'Vasos plásticos',
+  'imagenes/plasticos/vasos plasticos.png',
+  'Paquete de vasos plásticos para bebidas frías.'
+)">
+  <div class="img-producto">
+    <img src="imagenes/plasticos/vasos plasticos.png" alt="Vasos plásticos">
+  </div>
+  <h4>Vasos plásticos</h4>
+  <p>Para bebidas frías.</p>
+  <span class="precio">Paquete $1.00</span>
+</div>
+
+<div class="producto" onclick="abrirModal(
+  'Cucharas desechables',
+  'imagenes/plasticos/cucharas.png',
+  'Paquete de cucharas plásticas desechables.'
+)">
+  <div class="img-producto">
+    <img src="imagenes/plasticos/cucharas.png" alt="Cucharas desechables">
+  </div>
+  <h4>Cucharas desechables</h4>
+  <p>Uso práctico.</p>
+  <span class="precio">Paquete $1.00</span>
+</div>
+</div>
+
+  <!-- MODAL DE INGREDIENTES -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">×</span>
+    <h3 id="modal-titulo"></h3>
+    <img id="modal-imagen" src="" alt="">
+    <p id="modal-ingredientes"></p>
+  </div>
+</div>
+
+<script>
+function abrirModal(nombre, imagen, ingredientes) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modal-titulo").innerText = nombre;
+  document.getElementById("modal-imagen").src = imagen;
+  document.getElementById("modal-ingredientes").innerText = ingredientes;
+}
+
+function cerrarModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+  <a href="productos.html" class="boton-regresar-fijo">
        Regresar
     </a>
 
