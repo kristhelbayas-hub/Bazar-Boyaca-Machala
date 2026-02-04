@@ -369,7 +369,7 @@ footer {
 }
 
 .hero {
-  min-height: calc(100vh - 150px);
+  height: 50vh;   /* ← AQUÍ ESTÁ LA SOLUCIÓN */
   margin: 20px;
   border-radius: 14px;
 
@@ -383,6 +383,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 
 @keyframes sliderHero {
   0% {
@@ -418,13 +419,23 @@ footer {
 }
 
 .descripcion {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
   font-size: 18px;
   line-height: 1.8;
   text-align: justify;
+
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
 }
+
 .bodyct {
   font-family: Arial, sans-serif;
   background-color: #f4f6f8;
@@ -767,3 +778,119 @@ footer {
     cursor: pointer;
 }
 
+/* SECCIÓN PRODUCTOS */
+.productos-contenedor {
+  max-width: 1400px;
+  margin: 60px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.productos-contenedor .imagen-productos img {
+  width: 190%;
+  max-width: 500px;
+  border-radius: 15px;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.catalogo-lateral .titulo-catalogo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* SECCIÓN Alimentos y Snacks */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-contenido img {
+  width: 150px;
+  margin: 15px 0;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/*EQUIPO DE DESARROLLO*/
+
+.equipo-desarrollo {
+  max-width: 1100px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.equipo-desarrollo h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(3, 280px); 
+  gap: 40px;
+  justify-content: center; 
+  margin: 40px auto 0 auto; 
+}
+
+.miembro {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.miembro:hover {
+  transform: translateY(-8px);
+}
+
+.miembro img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #1e4f7a;
+}
+
+.miembro h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #1e4f7a;
+}
+
+@media (max-width: 900px) {
+  .grid-equipo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
